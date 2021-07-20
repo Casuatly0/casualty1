@@ -593,10 +593,10 @@ class adminCog(commands.Cog):
 			manager_command_list += f"{','.join(commandSetting[33])} [금액] [아이디1] [아이디2]... *[사유]\n"   # 혈비지원
 			manager_command_list += f"{','.join(commandSetting[53])} [순번] [변경아이디]\n"   # 등록자수정
 
-			member_command_list : str = ""
+			manager_command_list : str = ""
 			member_command_list += f"{','.join(commandSetting[6])}\n"   # 혈원
 			member_command_list += f"{','.join(commandSetting[7])} [아이디]\n"   # 혈원등록
-			member_command_list += f"{','.join(commandSetting[8])} [아이디]\n\n"   # 혈원수정
+			manager_command_list += f"{','.join(commandSetting[8])} [아이디]\n\n"   # 혈원수정
 			
 			member_command_list += f"{','.join(commandSetting[28])}\n"   # 계좌
 			member_command_list += f"{','.join(commandSetting[58])} [금액] [대상아이디]\n"   # 이체
@@ -605,8 +605,8 @@ class adminCog(commands.Cog):
 			member_command_list += f"{','.join(commandSetting[11])} (검색조건) (검색값)\n\n"   # 정산확인
 			
 			member_command_list += f"{','.join(commandSetting[12])} [보스명] [아이템] [루팅자] [아이디1] [아이디2] ... (참고이미지 url)\n"   # 등록
-			member_command_list += f"{','.join(commandSetting[12])} [보스명] [아이템1] [아이템2] [아이템3] *[루팅자] [아이디1] [아이디2] ... (참고이미지 url)\n※ 루팅자 앞에 [*]을 넣어서 아이템 여러개 동시 등록 가능\n"   # 멀티등록
-			member_command_list += f"{','.join(commandSetting[52])} [보스명] [아이템] [루팅자] [뽑을인원] [아이디1] [아이디2] ... (참고이미지 url)\n\n"   # 뽑기등록
+			manager_command_list += f"{','.join(commandSetting[12])} [보스명] [아이템1] [아이템2] [아이템3] *[루팅자] [아이디1] [아이디2] ... (참고이미지 url)\n※ 루팅자 앞에 [*]을 넣어서 아이템 여러개 동시 등록 가능\n"   # 멀티등록
+			manager_command_list += f"{','.join(commandSetting[52])} [보스명] [아이템] [루팅자] [뽑을인원] [아이디1] [아이디2] ... (참고이미지 url)\n\n"   # 뽑기등록
 			member_command_list += f"----- 등록자만 가능 -----\n"   # 등록자
 			member_command_list += f"{','.join(commandSetting[13])} (상세)\n"   # 등록확인1
 			member_command_list += f"{','.join(commandSetting[13])} (상세) (검색조건) (검색값)\n"   # 등록확인2
@@ -623,17 +623,17 @@ class adminCog(commands.Cog):
 			member_command_list += f"{','.join(commandSetting[21])} [순번] [변경아이디]\n"   # 토글수정
 			member_command_list += f"{','.join(commandSetting[22])} [순번] [추가아이디]\n"   # 참여자추가
 			member_command_list += f"{','.join(commandSetting[23])} [순번] [삭제아이디]\n"   # 참여자삭제
-			member_command_list += f"{','.join(commandSetting[50])} [순번] [수정이미지 url]\n"   # 이미지수정
-			member_command_list += f"{','.join(commandSetting[24])} [순번] [금액]\n"   # 판매
-			member_command_list += f"{','.join(commandSetting[45])} [순번] [금액] [뽑을인원]\n"   # 뽑기판매
-			member_command_list += f"{','.join(commandSetting[51])} [순번]\n"   # 판매취소
-			member_command_list += f"{','.join(commandSetting[29])} [순번] [금액]\n"   # 저축
-			member_command_list += f"{','.join(commandSetting[48])} [순번] [금액] [뽑을인원]\n"   # 뽑기저축
-			member_command_list += f"{','.join(commandSetting[25])} [순번] [아이디]\n"   # 정산
-			member_command_list += f"{','.join(commandSetting[26])} [순번] [아이디]\n"   # 정산취소
-			member_command_list += f"{','.join(commandSetting[27])}\n"   # 일괄정산1
-			member_command_list += f"{','.join(commandSetting[27])} (검색조건) (검색값)\n"   # 일괄정산2
-			member_command_list += f"{','.join(commandSetting[57])} (검색조건) (검색값)\n"   # 부분정산
+			manager_command_list += f"{','.join(commandSetting[50])} [순번] [수정이미지 url]\n"   # 이미지수정
+			manager_command_list += f"{','.join(commandSetting[24])} [순번] [금액]\n"   # 판매
+			manager_command_list += f"{','.join(commandSetting[45])} [순번] [금액] [뽑을인원]\n"   # 뽑기판매
+			manager_command_list += f"{','.join(commandSetting[51])} [순번]\n"   # 판매취소
+			manager_command_list += f"{','.join(commandSetting[29])} [순번] [금액]\n"   # 저축
+			manager_command_list += f"{','.join(commandSetting[48])} [순번] [금액] [뽑을인원]\n"   # 뽑기저축
+			manager_command_list += f"{','.join(commandSetting[25])} [순번] [아이디]\n"   # 정산
+			manager_command_list += f"{','.join(commandSetting[26])} [순번] [아이디]\n"   # 정산취소
+			manager_command_list += f"{','.join(commandSetting[27])}\n"   # 일괄정산1
+			manager_command_list += f"{','.join(commandSetting[27])} (검색조건) (검색값)\n"   # 일괄정산2
+			manager_command_list += f"{','.join(commandSetting[57])} (검색조건) (검색값)\n"   # 부분정산
 
 			etc_command_list : str = ""
 			etc_command_list += f"{','.join(commandSetting[46])}\n"   # 기본설정확인
